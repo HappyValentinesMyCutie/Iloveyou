@@ -1,0 +1,51 @@
+body {
+    margin:0;
+    height:100vh;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+h1 {
+    color:white;
+    font-size:42px;
+}
+
+.buttons {
+    display:flex;
+    gap:20px;
+}
+
+button {
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+#yesBtn{
+    background:#ff4b5c;
+    color:white;
+}
+
+#noBtn{
+    background:white;
+    color:#ff4b5c;
+    position:relative;
+}
+
+#luckBtn{
+    margin-top:40px;
+    background:white;
+    color:#ff4b5c;
+}
+#message{
+    display:none;
+    font-size:28px;
+    color:white;
+    margin-top:20px;
+}

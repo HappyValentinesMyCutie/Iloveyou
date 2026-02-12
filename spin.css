@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #ff9a9e 0%, #fecfef 45%, #f6d1ff 100%);
+  font-family: Arial, sans-serif;
+}
+
+#spin_the_wheel {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 320px;      /* smaller wheel */
+  height: 320px;     /* smaller wheel */
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 40px rgba(255, 75, 92, 0.6),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at center, rgba(255,255,255,0.25), rgba(255,255,255,0));
+}
+
+/* Make wheel fit */
+#wheel {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 70%;
+}
+
+/* SPIN button */
+#spin {
+  font: 1.2em/0 "Lato", sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15%;
+  background: linear-gradient(135deg, #ff4b5c, #ff8a5c);
+  color: #fff;
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.6),
+    0 0px 15px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+/* pointer above button */
+#spin::after {
+  content: "❤";
+  position: absolute;
+  top: -18px;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+/* Hover glow */
+#spin:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.6),
+    0 0 25px rgba(255, 75, 92, 0.8),
+    0 0px 20px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+  #spin_the_wheel {
+    width: 500px;
+    height: 500px;
+  }
+
