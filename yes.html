@@ -144,14 +144,21 @@
 </style>
 </head>
 <!-- Hidden Background Music -->
-<iframe 
-  width="0" 
-  height="0" 
-  src="https://www.youtube.com/embed/aw0s2KaoA2Q?start=65&autoplay=1&loop=1&playlist=aw0s2KaoA2Q" 
-  frameborder="0" 
-  allow="autoplay" 
-  style="display:none;">
-</iframe>
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  function startMusic() {
+    music.currentTime = 65; // 1:05
+    music.play();
+    window.removeEventListener("click", startMusic);
+  }
+
+  window.addEventListener("click", startMusic);
+</script>
 
 <body>
   <canvas id="confetti"></canvas>
@@ -232,4 +239,5 @@
 
 
 </html>
+
 
